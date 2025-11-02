@@ -1,5 +1,5 @@
 
-# brightedge-go-crawler
+# web-crawler
 
 A minimal Go service that:
 - Fetches a URL
@@ -126,20 +126,4 @@ curl -s -X POST localhost:8080/crawl \
 
 - **CLI**: `go run ./cmd/cli --input examples/urls.csv --output examples/output.ndjson`
 - **API (multipart)**: `POST /crawl/upload` with `file=@examples/urls.csv` returns NDJSON stream.
-
-### Example files 
-See `examples/` folder.
-Run the example files from the root
-```bash
-sh examples/run_example.sh
-```
-
-Outout:
-
-```text
-2025/11/01 11:17:11 [INFO] server listening on :8080
-Wrote examples/output.ndjson
-2025/11/01 11:17:14 [INFO] POST /crawl/upload 774.451354ms
-Wrote examples/upload_output.ndjson
-```
 
